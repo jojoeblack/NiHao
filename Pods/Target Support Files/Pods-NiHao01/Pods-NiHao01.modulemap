@@ -1,0 +1,6 @@
+framework module Pods_NiHao01 {
+  umbrella header "Pods-NiHao01-umbrella.h"
+
+  export *
+  module * { export * }
+}
