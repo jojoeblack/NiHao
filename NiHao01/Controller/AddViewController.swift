@@ -149,7 +149,7 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     }//end detect
     func translate() {
         let translator = ROGoogleTranslate()
-        translator.apiKey = "AIzaSyCt6wjp3ZOdddpoK4yu1Xs1KBedYb5DhJk" // API Key
+        translator.apiKey = "// API Key" 
         
         var params = ROGoogleTranslateParams()
         params.source = "en"
