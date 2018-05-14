@@ -204,6 +204,7 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate, UIColl
             catch {
                 print("Error:\(String(describing: response.result.error))")
             }//end catch
+            //變數傳遞至另一頁面                                  
             wordsVC.ch = myArray[0].vocabularyCh
             wordsVC.eng = myArray[0].vocabularyEng
             //wordsVC.img = foodArray[0].vocabularyImg
