@@ -34,6 +34,7 @@ class WordsViewController: UIViewController {
         super.viewDidLoad()
         lblCh.text = ch
         lblEng.text = eng
+        //顯示圖片
         DispatchQueue.main.async {
             if let imgURL = URL(string: self.topicArray[0].vocabularyImg) {
                 do{
@@ -104,7 +105,7 @@ class WordsViewController: UIViewController {
             return
 
     }// end next btn
-    
+    //子視窗
     @IBAction func oralTestBtn_Tapped(_ sender: Any) {
         let oraltestVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OralViewController") as! OralViewController
         
