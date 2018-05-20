@@ -77,6 +77,7 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    //登出
     @IBAction func logoutBtn_Tapped(_ sender: Any) {
         do {
             
@@ -84,15 +85,17 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate, UIColl
                 if userInfo.providerID == "facebook.com" {
                     FBSDKLoginManager().logOut()
                     break
-                }
+                }//臉書登出
             }
+            //email登出
             try Auth.auth().signOut()
             
             let signInPage = self.storyboard?.instantiateViewController(withIdentifier: "navSignin") as! UINavigationController
-            
+            //轉登入畫面
             let appDelegat = UIApplication.shared.delegate
             appDelegat?.window??.rootViewController = signInPage
-        } catch {
+        } //end do
+        catch {
             self.showMessage(messageToDisplay: "Could not signout at this moment")
         }
     }
